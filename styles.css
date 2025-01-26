@@ -67,6 +67,12 @@ a:hover{
     cursor: default;
 }
 
+/*pagebutton */
+
+.pagebutton {
+    backcolor: rgb(200, 0, 0);
+    height: 36;
+    
 /* hamburger menu */
 
 #hamburger-nav {
