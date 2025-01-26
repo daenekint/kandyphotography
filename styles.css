@@ -73,26 +73,6 @@ a:hover{
     backcolor: rgb(200, 0, 0);
     height: 36;
     
-/* hamburger menu */
-
-#hamburger-nav {
-    display: none;
-}
-
-.hamburger-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.hamburger-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
-
-}
 
 form {
     padding: 10px;
