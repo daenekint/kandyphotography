@@ -96,7 +96,7 @@ input[type="text"], input[type="email"]{
     padding: 1rem;
 }
 .gallery img {
-    width: 100%;
+    width: 30%;
     margin-bottm: 1rem;
     diplay: block;
     transition: transform 0.3 ease;
