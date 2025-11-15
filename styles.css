@@ -104,3 +104,30 @@ input[type="text"], input[type="email"]{
     padding: 10px;
     width: 400px;
 }
+
+/* content */
+
+.content {
+    padding 8px 90px;
+    font-family: "roboto", sans-serif;
+}
+
+.content p {
+    line heght: 1.9;
+}
+
+.content img {
+    max-height: 500px;
+}
+
+/* share buttons */
+
+.share-btn-container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    
+    
