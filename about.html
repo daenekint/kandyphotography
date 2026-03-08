@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>K&Y Photography | About</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <strong>K&Y Photography</strong>
+      <span>Koekelare, West‑Vlaanderen</span>
+    </div>
+
+    <nav aria-label="Hoofdnavigatie">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Galerij</a></li>
+        <li><a href="giftcard.html">Cadeaubon</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social">
+      <a href="https://www.facebook.com/KenYPhotography" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/kandyphoto89" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="section-title">Over ons</h1>
+
+  <div class="card" style="display:grid; gap:12px;">
+    <p class="notice">
+      Vervang gerust deze tekst door jullie eigen verhaal (wie zijn K & Y, ervaring, werkwijze, enz.).
+    </p>
+    <p>
+      Vanuit <strong>Koekelare</strong> leggen we momenten vast die echt aanvoelen:
+      liefde, connectie, kleine details en spontane emoties.
+    </p>
+    <img src="img/about.jpg" alt="K&Y Photography - behind the scenes" style="width:100%; border-radius:16px; border:1px solid var(--border); object-fit:cover; max-height:360px;">
+  </div>
+
+  <h2 class="section-title">Waarvoor kan je bij ons terecht?</h2>
+  <div class="grid-3">
+    <div class="card"><strong>Zwangerschap</strong><br><span class="notice">Op locatie of gezellig binnen.</span></div>
+    <div class="card"><strong>Newborn</strong><br><span class="notice">Rustig tempo, baby staat centraal.</span></div>
+    <div class="card"><strong>Huwelijk</strong><br><span class="notice">Reportage met een tijdloze look.</span></div>
+    <div class="card"><strong>Communie/Lentefeest</strong><br><span class="notice">Speelse portretten zonder druk.</span></div>
+    <div class="card"><strong>Birthday</strong><br><span class="notice">Cakesmash / verjaardagshoots (vul aan).</span></div>
+    <div class="card"><strong>Evenementen</strong><br><span class="notice">Sfeer, mensen en momenten.</span></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">© <span id="y"></span> K&Y Photography</div>
+</footer>
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

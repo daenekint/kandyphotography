@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>K&Y Photography | Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <strong>K&Y Photography</strong>
+      <span>Contact</span>
+    </div>
+
+    <nav aria-label="Hoofdnavigatie">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Galerij</a></li>
+        <li><a href="giftcard.html">Cadeaubon</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="social">
+      <a href="https://www.facebook.com/KenYPhotography" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/kandyphoto89" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h1 class="section-title">Neem contact op</h1>
+
+  <div class="grid-3" style="grid-template-columns: 1.1fr 0.9fr 1fr;">
+    <div class="card" style="grid-column: 1 / -1;">
+      <p class="notice">
+        Dit formulier gebruikt <code>mailto:</code> en opent je e-mailprogramma met ingevulde tekst.
+        Voor “echte” verzending zonder mailprogramma heb je een backend of form-service nodig.
+      </p>
+    </div>
+
+    <div class="card" style="grid-column: 1 / 3;">
+      <form id="contactForm">
+        <div>
+          <label for="name">Naam</label>
+          <input id="name" name="name" required placeholder="Je naam" />
+        </div>
+
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required placeholder="jij@voorbeeld.be" />
+        </div>
+
+        <div>
+          <label for="subject">Onderwerp</label>
+          <input id="subject" name="subject" required placeholder="Shoot / Cadeaubon / Vraag..." />
+        </div>
+
+        <div>
+          <label for="message">Bericht</label>
+          <textarea id="message" name="message" required placeholder="Vertel ons wat je zoekt, datum(s), locatie, aantal personen, ..."></textarea>
+        </div>
+
+        <button class="btn" type="submit">Verstuur</button>
+      </form>
+    </div>
+
+    <aside class="card">
+      <strong>Direct mailen</strong>
+      <p class="notice">
+        <a href="mailto:kandyphotography@telenet.be">kandyphotography@telenet.be</a>
+      </p>
+      <strong>Social</strong>
+      <p class="notice">
+        <a href="https://www.facebook.com/KenYPhotography" target="_blank" rel="noopener">Facebook</a><br/>
+        <a href="https://www.instagram.com/kandyphoto89" target="_blank" rel="noopener">Instagram</a>
+      </p>
+    </aside>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="y"></span> K&Y Photography
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // Mailto-form: bouwt een e-mail op en opent de mailclient
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const to = "kandyphotography@telenet.be";
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const body =
+`Naam: ${name}
+E-mail: ${email}
+
+Bericht:
+${message}
+`;
+
+    const url = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = url;
+  });
+</script>
+</body>
+</html>
