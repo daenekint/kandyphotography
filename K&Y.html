@@ -1,300 +1,141 @@
-<!DOCTYPE html>
-<html lang="nl">
+<!DOCTYPE html><html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K&Y Photography</title>
-    <style>
-        :root {
-            /* KLEUREN VOOR LICHTE MODUS */
-            --accent-light: #d9c3a3;
-            --accent-dark: #bfa17a;
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --header-bg: #ffffff;
-            --form-bg: #f9f9f9;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K&Y Photography</title>
+  <style>
+    :root {
+      --beige-light: #f5efe6;
+      --beige: #e6d5b8;
+      --beige-dark: #c8b79c;
+      --brown: #6e5c4a;
+      --text: #3e342b;
+    }body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin:0;
+  padding:0;
+  background: var(--beige-light);
+  color: var(--text);
+}
 
-        body.dark-mode {
-            /* KLEUREN VOOR DONKERE MODUS */
-            --accent-light: #e6d5b8;
-            --accent-dark: #c7af8e;
-            --bg-color: #121212;
-            --text-color: #f5f5f5;
-            --header-bg: rgba(18,18,18,0.9);
-            --form-bg: #1f1f1f;
-        }
+header {
+  background: var(--beige-dark);
+  color: var(--text);
+  padding:20px;
+  text-align:center;
+}
 
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.5s, color 0.5s;
-        }
+nav a {
+  color: var(--text);
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:600;
+}
 
-        /* HEADER */
-        header {
-            background-color: var(--header-bg);
-            border-bottom: 2px solid var(--accent-dark);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            transition: background-color 0.5s;
-        }
+nav a:hover {
+  text-decoration: underline;
+}
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+footer {
+  background: var(--beige-dark);
+  color: var(--text);
+  text-align:center;
+  padding:15px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
 
-        .logo-container img {
-            height: 45px;
-            width: 45px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
+.container {
+  padding:40px 20px;
+}
 
-        header h1 {
-            font-size: 1.6rem;
-            letter-spacing: 2px;
-            background: linear-gradient(90deg, var(--accent-light), var(--accent-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+h1, h2, h3 {
+  color: var(--brown);
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-color);
-            margin-left: 20px;
-            font-weight: bold;
-            transition: color 0.3s, text-shadow 0.3s;
-        }
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+}
 
-        nav a:hover {
-            color: var(--accent-dark);
-        }
+.grid img {
+  width:100%;
+  border-radius:12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-        /* THEMA SCHAKELAAR */
-        .theme-toggle {
-            background: linear-gradient(90deg, var(--accent-dark), var(--accent-light));
-            border: none;
-            color: #1a1a1a;
-            font-weight: bold;
-            border-radius: 20px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
+form input, form textarea {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid var(--beige-dark);
+  border-radius:8px;
+  background: #fff;
+}
 
-        .theme-toggle:hover {
-            transform: scale(1.05);
-        }
+form button {
+  padding:12px 25px;
+  background: var(--brown);
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
 
-        /* HERO */
-        .hero {
-            height: 90vh;
-            background: 
-                linear-gradient(rgba(18,18,18,0.4), rgba(18,18,18,0.6)),
-               header.jpg center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
+form button:hover {
+  background: #5a4a3c;
+}
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 0 3px 10px rgba(0,0,0,0.7);
-        }
+a {
+  color: var(--brown);
+}
 
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 600px;
-        }
-
-        section {
-            padding: 4rem 10%;
-            transition: background-color 0.5s, color 0.5s;
-        }
-
-        /* OVER ONS */
-        .about {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .about img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-        }
-
-        .about div {
-            flex: 1;
-        }
-
-        .about h2 {
-            color: var(--accent-dark);
-        }
-
-        /* PORTFOLIO */
-        .portfolio {
-            text-align: center;
-        }
-
-        .portfolio h2 {
-            color: var(--accent-dark);
-            margin-bottom: 2rem;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(200,180,140,0.4);
-        }
-
-        /* CONTACT */
-        .contact h2 {
-            color: var(--accent-dark);
-        }
-
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .contact input, .contact textarea, .contact button {
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact input, .contact textarea {
-            background-color: var(--form-bg);
-            color: var(--text-color);
-        }
-
-        .contact button {
-            background: linear-gradient(90deg, var(--accent-dark), var(--accent-light));
-            color: #1a1a1a;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .contact button:hover {
-            transform: scale(1.03);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            background-color: var(--header-bg);
-            color: var(--text-color);
-            border-top: 1px solid var(--accent-dark);
-        }
-
-        @media (max-width: 768px) {
-            .about {
-                flex-direction: column;
-            }
-
-            .hero h2 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+  </style>
 </head>
-<body>
-    <header>
-        <div class="logo-container"
-            <img src="logo_Slogan_ky_color-2.png" alt="locatie" height="150" title="locatie" class="centre" />
-            <h1>K&Y Photography</h1>
-        </div>
-
-        <nav>
-            <a href="#about">Over ons</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-            <button class="theme-toggle" id="themeToggle">🌗 Thema</button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>Capturing Moments ~ creating memories.</h2>
-        <p>Professionele fotografie met oog voor emotie, licht en detail.</p>
-    </section>
-
-    <section id="about" class="about">
-        <img src="226A5160" alt="Fotografen aan het werk">
-        <div>
-            <h2>Over K&Y Photography</h2>
-            <p>Wij zijn K&Y Photography — een gepassioneerd duo gespecialiseerd in portret-, trouw- en lifestylefotografie. 
-            Onze missie is om echte momenten vast te leggen met een warme, natuurlijke stijl die tijdloos aanvoelt.</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="gallery">
-            <img src=488A9322.jpg" alt="Portretfoto">
-            <img src="226A7175" alt="Koppelshoot">
-            <img src="https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=600&q=80" alt="Trouwfoto">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Familieportret">
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Neem contact met ons op voor boekingen of vragen — we horen graag van je!</p>
-        <form>
-            <input type="text" placeholder="Naam" required>
-            <input type="email" placeholder="E-mail" required>
-            <textarea rows="5" placeholder="Bericht" required></textarea>
-            <button type="submit">Verzenden</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 K&Y Photography — Alle rechten voorbehouden</p>
-    </footer>
-
-    <script>
-        const toggleBtn = document.getElementById('themeToggle');
-        const body = document.body;
-
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            toggleBtn.textContent = body.classList.contains('dark-mode') ? "☀️ Licht" : "🌗 Donker";
-        });
-    </script>
-</body>
+<body><header>
+  <h1>K&Y Photography</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallerij</a>
+    <a href="#gift">Cadeaubon</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header><div class="container" id="home">
+  <h2>Welkom bij K&Y Photography</h2>
+  <p>Wij bieden professionele fotoshoots aan in onze studio en op locatie.</p>
+</div><div class="container" id="about">
+  <h2>Over ons</h2>
+  <p>Wij zijn gespecialiseerd in zwangerschap, newborn, huwelijk, communie, evenementen en meer.</p>
+</div><div class="container" id="gallery">
+  <h2>Gallerij</h2>
+  <h3>Zwangerschap</h3>
+  <div class="grid">
+    <img src="img/preg1.jpg">
+    <img src="img/preg2.jpg">
+  </div>
+  <h3>Newborn</h3>
+  <div class="grid">
+    <img src="img/newborn1.jpg">
+    <img src="img/newborn2.jpg">
+  </div>
+</div><div class="container" id="gift">
+  <h2>Cadeaubon</h2>
+  <p>Geef een fotoshoot cadeau! Contacteer ons voor meer info.</p>
+</div><div class="container" id="contact">
+  <h2>Contact</h2>
+  <form action="mailto:info@kyphotography.com" method="post" enctype="text/plain">
+    <input type="text" name="naam" placeholder="Naam" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="bericht" placeholder="Je bericht" required></textarea>
+    <button type="submit">Verstuur</button>
+  </form>
+</div><footer>
+  <p>Volg ons op:
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </p>
+</footer></body>
 </html>
