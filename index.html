@@ -194,6 +194,7 @@ to{opacity:1;transform:translateY(0);} }
 <nav>
 <a href="#">Home</a>
 <a href="#gallery">Gallerij</a>
+<a href="#cadeaubon">Cadeaubon</a>
 <a href="#contact">Contact</a>
 </nav>
 </header><section class="hero">
@@ -216,6 +217,17 @@ to{opacity:1;transform:translateY(0);} }
 <div class="card"><img src="226A7947.jpg" onclick="openLightbox(this.src)"></div>
 <div class="card"><img src="226A5160.jpg" onclick="openLightbox(this.src)"></div>
 </div>
+<section class="section" id="cadeaubon">
+<h2>Cadeaubon</h2>
+<p>kies een bedrag en betaal veilig online</p>
+
+<form action="https://checkout.stripe.com/pay/YOUR-LINK" method="get">
+<select name="bedrag">
+<option waarde="50">€50 fotobudget</option>
+<option waarde="100">€100 fotobudget</option>
+<option waarde="125">€125 fotobudget</option>
+<option waarde="175">€175 fotobudget</option>
+<option waarde="210">€210 fotobudget</option>
 </section><section class="section fade" id="contact">
 <h2 style="text-align:center">Contact</h2>
 <form action="https://formspree.io/f/mwvylerq" method="POST">
