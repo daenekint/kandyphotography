@@ -1,141 +1,239 @@
-<!DOCTYPE html><html lang="nl">
+<!-- ========================= ULTRA PREMIUM K&Y PHOTOGRAPHY ========================= --><!DOCTYPE html><html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K&Y Photography</title>
-  <style>
-    :root {
-      --beige-light: #f5efe6;
-      --beige: #e6d5b8;
-      --beige-dark: #c8b79c;
-      --brown: #6e5c4a;
-      --text: #3e342b;
-    }body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  margin:0;
-  padding:0;
-  background: var(--beige-light);
-  color: var(--text);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K&Y Photography</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"><style>
+:root{
+--beige-light:#f9f5f0;
+--beige:#eadfce;
+--beige-dark:#d8c3a5;
+--brown:#4b3a2f;
 }
 
-header {
-  background: var(--beige-dark);
-  color: var(--text);
-  padding:20px;
-  text-align:center;
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:var(--beige-light);
+color:#333;
 }
 
-nav a {
-  color: var(--text);
-  margin:0 15px;
-  text-decoration:none;
-  font-weight:600;
+h1,h2,h3{
+font-family:'Playfair Display',serif;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* NAV */
+header{
+position:fixed;
+width:100%;
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(15px);
+padding:20px;
+z-index:1000;
 }
 
-footer {
-  background: var(--beige-dark);
-  color: var(--text);
-  text-align:center;
-  padding:15px;
-  position:fixed;
-  bottom:0;
-  width:100%;
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
 }
 
-.container {
-  padding:40px 20px;
+nav a{
+text-decoration:none;
+color:var(--brown);
+font-weight:500;
+position:relative;
 }
 
-h1, h2, h3 {
-  color: var(--brown);
+nav a::after{
+content:"";
+position:absolute;
+width:0;height:2px;
+bottom:-5px;left:0;
+background:var(--brown);
+transition:0.3s;
 }
 
-.grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap:20px;
+nav a:hover::after{width:100%;}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('img/hero.jpg') center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
 }
 
-.grid img {
-  width:100%;
-  border-radius:12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.hero h1{
+font-size:80px;
+animation:fadeUp 1.5s ease;
 }
 
-form input, form textarea {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:1px solid var(--beige-dark);
-  border-radius:8px;
-  background: #fff;
+.hero p{
+font-size:22px;
+margin-top:10px;
+animation:fadeUp 2s ease;
 }
 
-form button {
-  padding:12px 25px;
-  background: var(--brown);
-  color:white;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
+.btn{
+padding:14px 35px;
+background:rgba(0,0,0,0.6);
+color:white;
+border-radius:30px;
+text-decoration:none;
+margin-top:20px;
+transition:0.3s;
 }
 
-form button:hover {
-  background: #5a4a3c;
+.btn:hover{background:black;}
+
+/* SECTIONS */
+.section{
+padding:120px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-a {
-  color: var(--brown);
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-  </style>
-</head>
-<body><header>
-  <h1>K&Y Photography</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallerij</a>
-    <a href="#gift">Cadeaubon</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header><div class="container" id="home">
-  <h2>Welkom bij K&Y Photography</h2>
-  <p>Wij bieden professionele fotoshoots aan in onze studio en op locatie.</p>
-</div><div class="container" id="about">
-  <h2>Over ons</h2>
-  <p>Wij zijn gespecialiseerd in zwangerschap, newborn, huwelijk, communie, evenementen en meer.</p>
-</div><div class="container" id="gallery">
-  <h2>Gallerij</h2>
-  <h3>Zwangerschap</h3>
-  <div class="grid">
-    <img src="img/preg1.jpg">
-    <img src="img/preg2.jpg">
-  </div>
-  <h3>Newborn</h3>
-  <div class="grid">
-    <img src="img/newborn1.jpg">
-    <img src="img/newborn2.jpg">
-  </div>
-</div><div class="container" id="gift">
-  <h2>Cadeaubon</h2>
-  <p>Geef een fotoshoot cadeau! Contacteer ons voor meer info.</p>
-</div><div class="container" id="contact">
-  <h2>Contact</h2>
-  <form action="mailto:info@kyphotography.com" method="post" enctype="text/plain">
-    <input type="text" name="naam" placeholder="Naam" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="bericht" placeholder="Je bericht" required></textarea>
-    <button type="submit">Verstuur</button>
-  </form>
+.card{
+position:relative;
+overflow:hidden;
+border-radius:20px;
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.6s;
+}
+
+.card:hover img{transform:scale(1.15);}
+
+.card::after{
+content:"Bekijk";
+position:absolute;
+top:50%;left:50%;
+transform:translate(-50%,-50%);
+color:white;
+opacity:0;
+transition:0.4s;
+font-size:20px;
+}
+
+.card:hover::after{opacity:1;}
+
+/* LIGHTBOX */
+.lightbox{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+}
+
+/* FORM */
+form{
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:14px 30px;
+background:var(--brown);
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+background:var(--beige-dark);
+padding:40px;
+text-align:center;
+}
+
+.fade{opacity:0;transform:translateY(50px);transition:1s;}
+.fade.show{opacity:1;transform:translateY(0);}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(50px);} 
+to{opacity:1;transform:translateY(0);} }
+</style></head><body><header>
+<nav>
+<a href="#">Home</a>
+<a href="#gallery">Gallerij</a>
+<a href="#contact">Contact</a>
+</nav>
+</header><section class="hero">
+<h1>K&Y Photography</h1>
+<p>Luxury storytelling through images</p>
+<a href="#contact" class="btn">Boek jouw shoot</a>
+</section><section class="section fade" id="gallery">
+<h2 style="text-align:center;margin-bottom:40px">Gallerij</h2>
+<div class="grid">
+<div class="card"><img src="img/1.jpg" onclick="openLightbox(this.src)"></div>
+<div class="card"><img src="img/2.jpg" onclick="openLightbox(this.src)"></div>
+<div class="card"><img src="img/3.jpg" onclick="openLightbox(this.src)"></div>
+<div class="card"><img src="img/4.jpg" onclick="openLightbox(this.src)"></div>
+</div>
+</section><section class="section fade" id="contact">
+<h2 style="text-align:center">Contact</h2>
+<form action="https://formspree.io/f/YOUR-ID" method="POST">
+<input type="text" name="name" placeholder="Naam" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Bericht" required></textarea>
+<button>Verstuur</button>
+</form>
+</section><div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
 </div><footer>
-  <p>Volg ons op:
-    <a href="https://facebook.com" target="_blank">Facebook</a> |
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-  </p>
-</footer></body>
+<p>Volg ons</p>
+<a href="#">Facebook</a> | <a href="#">Instagram</a>
+</footer><script>
+// fade animation
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+faders.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+if(top<window.innerHeight-100){el.classList.add('show');}
+});
+});
+
+// lightbox
+function openLightbox(src){
+document.getElementById('lightbox').style.display='flex';
+document.getElementById('lightbox-img').src=src;
+}
+
+function closeLightbox(){
+document.getElementById('lightbox').style.display='none';
+}
+</script></body>
 </html>
