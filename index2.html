@@ -1,86 +1,1625 @@
-<!doctype html>
-<html lang="nl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>K&Y Photography | Home</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-<header>
-  
-  <div class="logo"</div>
-    <div class="brand">
-      <strong>K&Y Photography</strong>
-      <span>Koekelare, West‑Vlaanderen</span>
-    </div>
-    <img src="logo_Slogan_ky_color-2.png" height="250" />
-    <br>
+<!DOCTYPE html>
 
-    <nav aria-label="Hoofdnavigatie">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">over ons</a></li>
-        <li><a href="gallery.html">Galerij</a></li>
-        <li><a href="giftcard.html">Cadeaubon</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<html lang="nl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>K&Y Photography | Fotograaf in Koekelare & West-Vlaanderen</title>
+
+    <meta name="description" content="K&Y Photography is een professionele fotograaf in Koekelare en West-Vlaanderen. Gezinsfotografie, zwangerschap, newborn, huwelijk, communie, koppels en portretten in studio of op locatie.">
+
+    <meta name="keywords" content="fotograaf Koekelare, fotograaf West-Vlaanderen, gezinsfotografie, zwangerschapsfotografie, newbornfotografie, huwelijksfotograaf, communiefotograaf">
+
+    <meta name="author" content="K&Y Photography">
+
+    <meta property="og:title" content="K&Y Photography | Fotograaf in Koekelare">
+
+    <meta property="og:description" content="Tijdloze fotografie vol echte momenten en emoties. Studio- en locatiefotografie in Koekelare en West-Vlaanderen.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://kandy-photography.com/">
+
+    <link rel="canonical" href="https://kandy-photography.com/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+
+            --cream: #f5f0e9;
+
+            --beige: #e7ddd1;
+
+            --dark-beige: #b9a28e;
+
+            --brown: #6b5949;
+
+            --dark: #302a25;
+
+            --white: #fffdf9;
+
+        }
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+        body {
+
+            font-family: 'Montserrat', sans-serif;
+
+            color: var(--dark);
+
+            background: var(--cream);
+
+            line-height: 1.7;
+
+        }
+
+        img {
+
+            width: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+        a {
+
+            text-decoration: none;
+
+            color: inherit;
+
+        }
+
+        /* =========================
+
+           NAVIGATION
+
+        ========================= */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(245, 240, 233, 0.94);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(107,89,73,.1);
+
+        }
+
+        nav {
+
+            max-width: 1300px;
+
+            margin: auto;
+
+            height: 85px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 30px;
+
+        }
+
+        .logo {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 34px;
+
+            letter-spacing: 2px;
+
+        }
+
+        .logo span {
+
+            font-size: 13px;
+
+            display: block;
+
+            letter-spacing: 4px;
+
+            text-align: center;
+
+            margin-top: -8px;
+
+        }
+
+        nav ul {
+
+            display: flex;
+
+            gap: 30px;
+
+            list-style: none;
+
+        }
+
+        nav a {
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            transition: .3s;
+
+        }
+
+        nav a:hover {
+
+            color: var(--dark-beige);
+
+        }
+
+        .nav-button {
+
+            background: var(--brown);
+
+            color: white;
+
+            padding: 12px 20px;
+
+        }
+
+        /* =========================
+
+           HERO
+
+        ========================= */
+
+        .hero {
+
+            height: 100vh;
+
+            min-height: 650px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+
+                    rgba(30,25,20,.28),
+
+                    rgba(30,25,20,.38)
+
+                ),
+
+                url('images/hero.jpg') center/cover no-repeat;
+
+        }
+
+        .hero-content {
+
+            color: white;
+
+            max-width: 900px;
+
+            padding: 30px;
+
+        }
+
+        .hero-content small {
+
+            text-transform: uppercase;
+
+            letter-spacing: 5px;
+
+            font-size: 12px;
+
+        }
+
+        .hero h1 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            font-weight: 400;
+
+            line-height: .95;
+
+            margin: 20px 0;
+
+        }
+
+        .hero p {
+
+            font-size: 16px;
+
+            max-width: 650px;
+
+            margin: auto;
+
+        }
+
+        .hero-buttons {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+        }
+
+        .button {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            background: white;
+
+            color: var(--dark);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            font-size: 11px;
+
+            transition: .3s;
+
+        }
+
+        .button:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+        .button.dark {
+
+            background: var(--brown);
+
+            color: white;
+
+        }
+
+        /* =========================
+
+           SECTIONS
+
+        ========================= */
+
+        section {
+
+            padding: 110px 30px;
+
+        }
+
+        .container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 60px;
+
+        }
+
+        .section-title small {
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            color: var(--dark-beige);
+
+            font-size: 11px;
+
+        }
+
+        .section-title h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 55px;
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin: 15px 0;
+
+        }
+
+        .section-title p {
+
+            color: #756b63;
+
+        }
+
+        /* =========================
+
+           INTRO
+
+        ========================= */
+
+        .intro {
+
+            background: var(--white);
+
+        }
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+        .intro-image img {
+
+            height: 600px;
+
+        }
+
+        .intro-text small {
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            color: var(--dark-beige);
+
+        }
+
+        .intro-text h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 55px;
+
+            font-weight: 400;
+
+            line-height: 1.05;
+
+            margin: 15px 0 25px;
+
+        }
+
+        .intro-text p {
+
+            margin-bottom: 18px;
+
+            color: #665e58;
+
+        }
+
+        /* =========================
+
+           SERVICES
+
+        ========================= */
+
+        .services {
+
+            background: var(--cream);
+
+        }
+
+        .service-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+        .service {
+
+            background: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .service img {
+
+            height: 330px;
+
+            transition: transform .6s;
+
+        }
+
+        .service:hover img {
+
+            transform: scale(1.05);
+
+        }
+
+        .service-content {
+
+            padding: 25px;
+
+        }
+
+        .service h3 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+        }
+
+        .service p {
+
+            font-size: 13px;
+
+            color: #746b64;
+
+            margin-top: 8px;
+
+        }
+
+        /* =========================
+
+           GALLERY
+
+        ========================= */
+
+        .gallery {
+
+            background: var(--white);
+
+        }
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+        }
+
+        .gallery-grid img {
+
+            height: 420px;
+
+            transition: .5s;
+
+        }
+
+        .gallery-grid img:hover {
+
+            transform: scale(1.02);
+
+            opacity: .9;
+
+        }
+
+        .gallery-button {
+
+            text-align: center;
+
+            margin-top: 45px;
+
+        }
+
+        /* =========================
+
+           LOCATION
+
+        ========================= */
+
+        .location {
+
+            background: var(--beige);
+
+        }
+
+        .location-content {
+
+            max-width: 850px;
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+        .location h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 55px;
+
+            font-weight: 400;
+
+        }
+
+        .location p {
+
+            margin-top: 20px;
+
+            color: #655a51;
+
+        }
+
+        /* =========================
+
+           GIFT
+
+        ========================= */
+
+        .gift {
+
+            background: var(--white);
+
+        }
+
+        .gift-box {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 70px;
+
+            text-align: center;
+
+            background: var(--cream);
+
+        }
+
+        .gift-box h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 55px;
+
+            font-weight: 400;
+
+        }
+
+        .gift-box p {
+
+            max-width: 650px;
+
+            margin: 20px auto 30px;
+
+        }
+
+        /* =========================
+
+           CTA
+
+        ========================= */
+
+        .cta {
+
+            background:
+
+                linear-gradient(
+
+                    rgba(45,37,30,.55),
+
+                    rgba(45,37,30,.55)
+
+                ),
+
+                url('images/cta.jpg') center/cover;
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+        .cta h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 65px;
+
+            font-weight: 400;
+
+        }
+
+        .cta p {
+
+            max-width: 600px;
+
+            margin: 15px auto 30px;
+
+        }
+
+        /* =========================
+
+           FOOTER
+
+        ========================= */
+
+        footer {
+
+            background: var(--dark);
+
+            color: white;
+
+            padding: 70px 30px 30px;
+
+        }
+
+        .footer-grid {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 50px;
+
+        }
+
+        footer h3 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 35px;
+
+            font-weight: 400;
+
+        }
+
+        footer h4 {
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-size: 11px;
+
+            margin-bottom: 15px;
+
+        }
+
+        footer p,
+
+        footer a {
+
+            color: #d6cec7;
+
+            font-size: 13px;
+
+        }
+
+        footer a:hover {
+
+            color: white;
+
+        }
+
+        .social {
+
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 20px;
+
+        }
+
+        .copyright {
+
+            border-top: 1px solid rgba(255,255,255,.15);
+
+            margin-top: 50px;
+
+            padding-top: 25px;
+
+            text-align: center;
+
+            color: #aaa;
+
+            font-size: 11px;
+
+        }
+
+        /* =========================
+
+           MOBILE
+
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            nav ul {
+
+                display: none;
+
+            }
+
+            .intro-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .intro-image img {
+
+                height: 450px;
+
+            }
+
+            .service-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .gallery-grid {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+
+                padding: 75px 20px;
+
+            }
+
+            .hero h1 {
+
+                font-size: 58px;
+
+            }
+
+            .section-title h2,
+
+            .intro-text h2,
+
+            .location h2,
+
+            .gift-box h2 {
+
+                font-size: 42px;
+
+            }
+
+            .service-grid,
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .gallery-grid img {
+
+                height: 450px;
+
+            }
+
+            .gift-box {
+
+                padding: 40px 25px;
+
+            }
+
+            .cta h2 {
+
+                font-size: 48px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <a href="#" class="logo">
+
+            K&Y
+
+            <span>PHOTOGRAPHY</span>
+
+        </a>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#over-ons">Over ons</a></li>
+
+            <li><a href="#fotografie">Fotografie</a></li>
+
+            <li><a href="#galerij">Galerij</a></li>
+
+            <li><a href="#cadeaubon">Cadeaubon</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+        <a href="#contact" class="nav-button">
+
+            Boek je shoot
+
+        </a>
+
     </nav>
 
-    <div class="social" aria-label="Social links">
-      <a href="https://www.facebook.com/KenYPhotography" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com/kandyphoto89" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </div>
 </header>
 
-<main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="card">
-        <h1>Warm, tijdloos & spontaan</h1>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <small>Fotograaf · Koekelare · West-Vlaanderen</small>
+
+        <h1>
+
+            Moments<br>
+
+            worth remembering
+
+        </h1>
+
         <p>
-          K&Y Photography is gevestigd in <strong>Koekelare (West‑Vlaanderen)</strong>.
-          We fotograferen o.a. <strong>zwangerschap</strong>, <strong>newborn</strong>, <strong>huwelijk</strong>,
-          <strong>communie/lentefeest</strong>, <strong>birthday</strong> en <strong>evenementen</strong>.
+
+            Tijdloze fotografie vol echte momenten,
+
+            emoties en herinneringen.
+
         </p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn" href="contact.html">Beschikbaarheid vragen</a>
-          <a class="btn secondary" href="gallery.html">Bekijk de galerij</a>
+
+        <div class="hero-buttons">
+
+            <a href="#fotografie" class="button">
+
+                Ontdek onze fotografie
+
+            </a>
+
+            <a href="#contact" class="button dark">
+
+                Boek jouw shoot
+
+            </a>
+
         </div>
 
-        <h2 class="section-title">Diensten</h2>
-        <div class="grid-3">
-          <div class="card">
-            <strong>Zwangerschap & newborn</strong><br />
-            <span class="notice">Zachte, warme beelden met oog voor detail.</span>
-          </div>
-          <div class="card">
-            <strong>Huwelijk</strong><br />
-            <span class="notice">Van voorbereiding tot feest — jullie verhaal.</span>
-          </div>
-          <div class="card">
-            <strong>Communie / lentefeest</strong><br />
-            <span class="notice">Speels, spontaan en helemaal zichzelf.</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Vervang img/hero.jpg door jouw eigen foto -->
-      <img class="hero-img" src="logo_Slogan_ky_color-2.png" alt="K&Y Photography - sfeerbeeld" />
     </div>
-  </section>
-</main>
 
-<footer class="footer">
-  <div class="container">
-    © <span id="y"></span> K&Y Photography — Koekelare, West‑Vlaanderen
-  </div>
+</section>
+
+<!-- INTRO -->
+
+<section class="intro" id="over-ons">
+
+    <div class="container intro-grid">
+
+        <div class="intro-image">
+
+            <img
+
+                src="images/about.jpg"
+
+                alt="K&Y Photography fotograaf in Koekelare"
+
+            >
+
+        </div>
+
+        <div class="intro-text">
+
+            <small>Welkom bij K&Y Photography</small>
+
+            <h2>
+
+                Jullie verhaal,
+
+                vastgelegd in beelden.
+
+            </h2>
+
+            <p>
+
+                Welkom bij K&Y Photography, de fotostudio
+
+                van Kimberley Gruwé en Yvo Daenekint
+
+                in Koekelare.
+
+            </p>
+
+            <p>
+
+                We houden van foto's die natuurlijk aanvoelen:
+
+                echte emoties, spontane momenten en de kleine
+
+                details die een herinnering bijzonder maken.
+
+            </p>
+
+            <p>
+
+                Vanuit Koekelare fotograferen we gezinnen,
+
+                koppels en bijzondere momenten in heel
+
+                West-Vlaanderen.
+
+            </p>
+
+            <a href="#contact" class="button dark">
+
+                Meer over ons
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="fotografie">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Onze fotografie</small>
+
+            <h2>
+
+                Voor momenten die je
+
+                nooit wilt vergeten
+
+            </h2>
+
+            <p>
+
+                Van de eerste weken met je baby tot een
+
+                huwelijk of een gezellige gezinsshoot.
+
+                We leggen jullie mooiste momenten vast
+
+                zoals ze echt zijn.
+
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <article class="service">
+
+                <img
+
+                    src="images/gezinsfotografie.jpg"
+
+                    alt="Gezinsfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Gezinsfotografie</h3>
+
+                    <p>
+
+                        Spontane momenten,
+
+                        liefde en plezier met het hele gezin.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/zwangerschap.jpg"
+
+                    alt="Zwangerschapsfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Zwangerschap</h3>
+
+                    <p>
+
+                        Een tijdloos aandenken aan
+
+                        een bijzondere periode.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/newborn.jpg"
+
+                    alt="Newbornfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Newborn</h3>
+
+                    <p>
+
+                        De kleine details van
+
+                        de eerste weken met je baby.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/huwelijk.jpg"
+
+                    alt="Huwelijksfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Huwelijk</h3>
+
+                    <p>
+
+                        Jullie trouwdag verteld
+
+                        in beelden vol emotie.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/communie.jpg"
+
+                    alt="Communiefotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Communie</h3>
+
+                    <p>
+
+                        Een bijzondere mijlpaal
+
+                        om voor altijd te bewaren.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/koppel.jpg"
+
+                    alt="Koppelfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Koppels</h3>
+
+                    <p>
+
+                        Jullie liefde en connectie
+
+                        in natuurlijke beelden.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/portret.jpg"
+
+                    alt="Portretfotografie in Koekelare"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Portret</h3>
+
+                    <p>
+
+                        Persoonlijke portretten
+
+                        met een tijdloze uitstraling.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="service">
+
+                <img
+
+                    src="images/events.jpg"
+
+                    alt="Eventfotografie in West-Vlaanderen"
+
+                >
+
+                <div class="service-content">
+
+                    <h3>Events</h3>
+
+                    <p>
+
+                        Bijzondere momenten,
+
+                        professioneel vastgelegd.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery" id="galerij">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <small>Portfolio</small>
+
+            <h2>
+
+                Een selectie uit ons werk
+
+            </h2>
+
+            <p>
+
+                Ontdek onze stijl en laat je inspireren
+
+                door eerdere fotoshoots.
+
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <img
+
+                src="images/gallery-1.jpg"
+
+                alt="Fotoshoot K&Y Photography West-Vlaanderen"
+
+            >
+
+            <img
+
+                src="images/gallery-2.jpg"
+
+                alt="Gezinsfotografie K&Y Photography"
+
+            >
+
+            <img
+
+                src="images/gallery-3.jpg"
+
+                alt="Zwangerschapsfotografie K&Y Photography"
+
+            >
+
+            <img
+
+                src="images/gallery-4.jpg"
+
+                alt="Newbornfotografie K&Y Photography"
+
+            >
+
+            <img
+
+                src="images/gallery-5.jpg"
+
+                alt="Huwelijksfotografie K&Y Photography"
+
+            >
+
+            <img
+
+                src="images/gallery-6.jpg"
+
+                alt="Portretfotografie K&Y Photography"
+
+            >
+
+        </div>
+
+        <div class="gallery-button">
+
+            <a href="#" class="button dark">
+
+                Bekijk volledige galerij
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="location">
+
+    <div class="location-content">
+
+        <small>Onze locatie</small>
+
+        <h2>
+
+            Fotograaf in Koekelare
+
+            & West-Vlaanderen
+
+        </h2>
+
+        <p>
+
+            Vanuit onze studio in Koekelare fotograferen
+
+            we klanten uit de ruime omgeving.
+
+            Een fotoshoot kan plaatsvinden in de studio
+
+            of op een locatie die bij jullie past.
+
+        </p>
+
+        <p>
+
+            Koekelare · Diksmuide · Kortemark · Torhout ·
+
+            Oostende · Brugge en omgeving
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- GIFT VOUCHER -->
+
+<section class="gift" id="cadeaubon">
+
+    <div class="container">
+
+        <div class="gift-box">
+
+            <small>Cadeaubon</small>
+
+            <h2>
+
+                Geef herinneringen cadeau
+
+            </h2>
+
+            <p>
+
+                Op zoek naar een persoonlijk en origineel
+
+                cadeau? Met een K&Y Photography cadeaubon
+
+                geef je een ervaring én herinneringen
+
+                die voor altijd bewaard blijven.
+
+            </p>
+
+            <p>
+
+                Onze cadeaubonnen zijn verkrijgbaar voor
+
+                €50, €100, €125, €175 en €210,
+
+                of voor een bedrag naar keuze.
+
+            </p>
+
+            <p>
+
+                De cadeaubon is één jaar geldig.
+
+            </p>
+
+            <a href="#contact" class="button dark">
+
+                Cadeaubon aanvragen
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <h2>
+
+            Jullie moment begint hier.
+
+        </h2>
+
+        <p>
+
+            Heb je vragen of wil je graag een fotoshoot
+
+            boeken? Neem gerust contact met ons op.
+
+        </p>
+
+        <a
+
+            href="mailto:kandyphotography@telenet.be"
+
+            class="button"
+
+        >
+
+            Neem contact op
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>K&Y Photography</h3>
+
+            <p>
+
+                Fotograaf in Koekelare en West-Vlaanderen.
+
+                Studio- en locatiefotografie voor
+
+                bijzondere momenten.
+
+            </p>
+
+            <div class="social">
+
+                <a href="#" target="_blank">
+
+                    Facebook
+
+                </a>
+
+                <a href="#" target="_blank">
+
+                    Instagram
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <h4>Navigatie</h4>
+
+            <p><a href="#home">Home</a></p>
+
+            <p><a href="#over-ons">Over ons</a></p>
+
+            <p><a href="#fotografie">Fotografie</a></p>
+
+            <p><a href="#galerij">Galerij</a></p>
+
+            <p><a href="#cadeaubon">Cadeaubon</a></p>
+
+            <p><a href="#contact">Contact</a></p>
+
+        </div>
+
+        <div>
+
+            <h4>Contact</h4>
+
+            <p>
+
+                K&Y Photography
+
+            </p>
+
+            <p>
+
+                Koekelare<br>
+
+                West-Vlaanderen
+
+            </p>
+
+            <p>
+
+                <a href="mailto:kandyphotography@telenet.be">
+
+                    kandyphotography@telenet.be
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 K&Y Photography · Alle rechten voorbehouden
+
+    </div>
+
 </footer>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
 </body>
+
 </html>
